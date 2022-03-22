@@ -37,7 +37,7 @@ class _SignupPageState extends State<SignupPage> {
     nameStreamController = StreamController<String>.broadcast();
     passwordStreamController = StreamController<String>.broadcast();
     _nameController.addListener(() {
-      emailStreamController.sink.add(_nameController.text.trim());
+      nameStreamController.sink.add(_nameController.text.trim());
       validateInputs();
     });
     _emailController.addListener(() {
@@ -168,6 +168,7 @@ class _SignupPageState extends State<SignupPage> {
                     return InputField(
                       controller: _passwordController,
                       placeholder: 'password',
+                      password: true,
                       validationMessage:
                           CustomFormValidation.errorMessagePassword(
                         snapshot.data,

@@ -1,4 +1,4 @@
-// ignore_for_file: join_return_with_assignment
+// ignore_for_file: join_return_with_assignment, use_build_context_synchronously
 
 import 'package:dukka/app/shared/flushbar_notification.dart';
 import 'package:dukka/app/view/view_model/base_view_model.dart';
