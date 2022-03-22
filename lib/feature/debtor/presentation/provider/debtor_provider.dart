@@ -10,6 +10,7 @@ import 'package:dukka/feature/debtor/domain/usecases/add_model_usecase.dart';
 import 'package:dukka/feature/debtor/domain/usecases/get_debtor_usecase.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:uuid/uuid.dart';
 
 @lazySingleton
@@ -29,8 +30,18 @@ class DebotorProvider extends BaseModel {
   List<Contact> _contacts = [];
   List<Contact> get contacts => _contacts;
   Future<void> getContacts() async {
-    final result = await ContactsService.getContacts();
-    _contacts = result;
+    final status = await Permission.contacts.status;
+    if (status.isDenied) {
+      final call = await Permission.contacts.request();
+      if (call.isGranted) {
+        final result = await ContactsService.getContacts();
+        _contacts = result;
+      }
+    } else {
+      final result = await ContactsService.getContacts();
+      _contacts = result;
+    }
+
     notifyListeners();
   }
 
