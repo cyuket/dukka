@@ -1,0 +1,59 @@
+name: dukka
+description: A Very Good Project created by Very Good CLI.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=2.14.0 <3.0.0"
+
+dependencies:
+  animations: ^2.0.1
+  bloc: ^8.0.2
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.0.1
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.17.0
+  gap: ^2.0.0
+  another_flushbar: ^1.10.11
+  dartz: ^0.10.0
+  equatable: ^2.0.0
+  json_annotation: ^4.4.0
+  internet_connection_checker: ^0.0.1+2
+  firebase_auth: ^3.3.5
+  firebase_core: ^1.12.0
+  firebase_storage: ^10.2.5
+  flutter_secure_storage: ^4.1.0
+  cloud_firestore: ^1.0.5
+  permission_handler: ^6.1.1
+  contacts_service: ^0.6.3
+  datetime_picker_formfield: ^2.0.0
+  uuid: ^3.0.6
+  local_auth: ^1.1.11
+
+dev_dependencies:
+  bloc_test: ^9.0.2
+  flutter_test:
+    sdk: flutter
+  mocktail: ^0.2.0
+  build_runner: ^2.0.6
+  very_good_analysis: ^2.4.0
+  injectable_generator: ^1.1.2
+  objectbox_generator: ^1.1.1
+  json_serializable: ^6.1.3
+  freezed: ^1.1.1
+
+dependency_overrides:
+  analyzer: ^2.1.0
+  crypto: ^3.0.1
+  http_parser: ^4.0.0
+  json_annotation: ^4.4.0
+  json_serializable: ^6.1.1
+  meta: ^1.7.0
+  path: ^1.8.1
+  xml: ^5.2.0
+
+flutter:
+  uses-material-design: true
+  generate: true
