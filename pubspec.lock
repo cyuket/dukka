@@ -547,7 +547,7 @@ packages:
     source: hosted
     version: "0.1.3"
   meta:
-    dependency: "direct overridden"
+    dependency: "direct dev"
     description:
       name: meta
       url: "https://pub.dartlang.org"

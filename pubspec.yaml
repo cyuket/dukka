@@ -37,6 +37,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   mocktail: ^0.2.0
+  meta: ^1.6.0 
   build_runner: ^2.0.6
   very_good_analysis: ^2.4.0
   injectable_generator: ^1.1.2
